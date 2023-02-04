@@ -1,16 +1,13 @@
 #Step 1: Check if VPN is active
 #Step 2: Check if login is required
-#Step 3: If login is required
-#Step 4: Read config file
+#Step 3: If login is required, Read config file
+#Step 4: If config file is not found, or not in proper JSON format, then create a new file
 #Step 5: Check if login is successful
 
 #Automatically login to the college network
 #If VPN is active, it will not work in some cases
 #Add '172.15.15.1' in 'Exclude split tunnel' list to avoid any connection error during authentication
 
-#Add comments in respective function according to step number
-
-#import required libraries
 import requests
 import json
 import time
@@ -169,4 +166,4 @@ if __name__ == "__main__":
     main()
 
 #Generate a .exe file using pyinstaller
-#pyinstaller --onefile --noconsole auto_auth_netCheck.py
+#pyinstaller --onefile --noconsole Autoauth.py
